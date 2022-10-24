@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>Welcome to HUST!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1", charset="UTF-8">
+    <style>
+        body{
+        font-family: Calibri, Helvetica, sans-serif;
+        background-color: rgb(254, 4, 46);
+        }
+        .container {
+        padding: 50px;
+        background-color: lightblue;
+        }
+
+        input[type=text], input[type=password], textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        }
+        input[type=text]:focus, input[type=password]:focus {
+        background-color: orange;
+        outline: none;
+        }
+        div {
+                    padding: 10px 0;
+                }
+        hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+        }
+        .registerbtn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        }
+        .registerbtn:hover {
+        opacity: 1;
+        }
+    </style>
+    </head>
+    <body>
+
+    <form action="handle.php" method="POST">
+
+    <div class="container">
+        <img src = "https://www.hust.edu.vn/hust-theme/images/logoEn.png">
+        <center>  <h1> Khảo sát sinh viên Bách Khoa</h1> </center>
+        <hr>
+        <div>
+            <label> Họ và tên </label>
+            <input type="text" name="name" placeholder= "Họ và tên" size="50" required />
+        </div>
+        <div>
+            <label for="khoa">
+            Khoá :
+            </label>
+
+            <select name="khoa" id="khoa">
+              <option value="K67">K67</option>
+              <option value="K66">K66</option>
+              <option value="K65">K65</option>
+              <option value="K64">K64</option>
+              <option value="K63">K63</option>
+              <option value="K62">K62</option>
+            </select>
+          </div>
+        <div>
+            <label>Sở thích :</label>
+
+            <input type="checkbox" name="hobby1" id="hobby1" value="Chơi game">
+            <label for="hobby1"> Chơi game</label>
+            <input type="checkbox" name="hobby2" id="hobby2" value="Nghe nhạc">
+            <label for="hobby2">Nghe nhạc</label>
+            <input type="checkbox" name="hobby3" id="hobby3" value="Đọc sách">
+            <label for="hobby3">Đọc sách</label>
+            <input type="checkbox" name="other" id="other" value="Other">
+            <label for="other">Khác</label>
+        </div>
+        <div>
+            <label for="time">Em dành bao nhiêu thời gian cho sở thích</label>
+            <br>
+            <span>Ít</span>
+            <input type="range" name="time" id="time" value="3" min="1" max="5">
+            <span>Nhiều</span>
+        </div>
+        <div>
+            <label>
+                Giới tính :
+            </label>
+            <input type="radio" value="Nam" name="gender" checked > Nam
+            <input type="radio" value="Female" name="gender"> Nữ
+            <input type="radio" value="Other" name="gender"> Khác
+        </div>
+        <div>
+            <label>
+            Số điện thoại :
+            </label>
+            <input type="tel" name="phonenum" pattern="[0]{1}[0-9]{9}" placeholder="0123456789" required />
+        </div>
+        <div>
+            <label for="address">
+            Địa chỉ hiện tại :
+            </label>
+            <textarea id="address" rows="4" cols="50" placeholder="Điền địa chỉ hiện tại của bạn" name="address" required></textarea>
+        </div>
+        <div>
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Nhập Email" name="email" required>
+        </div>
+        <button type="submit" class="registerbtn">Gửi</button>
+    </div>
+    </form>
+    </body>
+    </html>
+
