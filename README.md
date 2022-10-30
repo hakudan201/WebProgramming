@@ -1,3 +1,3 @@
-# Thực hành lập trình Web
-## WebProgramming
+# THỰC HÀNH LẬP TRÌNH WEB
+## WEB PROGRAMMING
 using HTML, PHP, XAMPP
