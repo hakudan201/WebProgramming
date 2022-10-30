@@ -22,13 +22,15 @@
     </table>
     <br>
     <?php
-        $num = $_POST["num"];
-        $convert = $_POST["convert"];
-        if ($convert == "DEG_TO_RAD"){
-            echo $num . " ° × π / 180°<br>= " . (deg2rad($num) / M_PI) . "π rad<br>= " . (deg2rad($num)) . "rad";
-        }
-        else {
-            echo $num . "×180°/π = " . rad2deg($num) . "°";
+        if ($_POST["num"] != ""){
+            $num = $_POST["num"];
+            $convert = $_POST["convert"];
+            if ($convert == "DEG_TO_RAD"){
+                echo $num . " ° × π / 180°<br>= " . (deg2rad($num) / M_PI) . "π rad<br>= " . (deg2rad($num)) . "rad";
+            }
+            else {
+                echo $num . "×180°/π = " . rad2deg($num) . "°";
+            }
         }
     ?>
 </body>
