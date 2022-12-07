@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  z-index: 2;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ccc;
+  background: url("https://img.phimmoichilli.net/images/film/wednesday.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  background-color: #333;
+  color: #ccc;
+}
+
+a:active {
+  background-color: #ddd;
+}
+
+.header-text {
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.address-text {
+  font-style: italic;
+}
+
+.text {
+  padding-block: 4px;
+}
