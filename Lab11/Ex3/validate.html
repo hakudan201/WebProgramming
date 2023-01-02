@@ -1,0 +1,93 @@
+<!--Create a register form and validate inputs in the form (username... not null, email, telephone in the right
+format...)-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <script type="text/javascript">
+        function doLoad() {
+            document.getElementById('register').addEventListener('submit', validate, false);
+        }
+        function validate(event) {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var password = document.getElementById('password').value;
+            var rePassword = document.getElementById('rePassword').value;
+            var error = document.getElementById('error');
+            var errorText = "";
+            if (username == "") {
+                errorText += "Username is required<br>";
+            }
+            if (email == "") {
+                errorText += "Email is required<br>";
+            }
+            if (phone == "") {
+                errorText += "Phone is required<br>";
+            }
+            if (phone != "") {
+                var phoneRegex = /^0[0-9]{9}$/;
+                if (!phoneRegex.test(phone)) {
+                    errorText += "Phone is not valid<br>";
+                }
+            }
+            if (email != "") {
+                var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                if (!emailRegex.test(email)) {
+                    errorText += "Email is not valid<br>";
+                }
+            }
+            if (password == "") {
+                errorText += "Password is required<br>";
+            }
+            if (rePassword == "") {
+                errorText += "Re-password is required<br>";
+            }
+            if (password != rePassword) {
+                errorText += "Password and re-password must be the same<br>";
+            }
+            if (errorText != "") {
+                error.innerHTML = errorText;
+                event.preventDefault();
+            }
+
+        }
+        window.addEventListener('load', doLoad, false);
+
+    </script>
+</head>
+
+<body>
+    <form id="register" action="register.php" method="post">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" id="username" name="username"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" id="phone" name="phone"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Re-password</td>
+                <td><input type="password" id="rePassword" name="rePassword"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+    <div id="error"></div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Colors</title>
+    <script type="text/javascript">
+        function doLoad() {
+            document.getElementById('red-link').
+                addEventListener('mouseover', redMouseOver, false);
+            document.getElementById('red-link').
+                addEventListener('mouseout', redMouseOut, false);
+            document.getElementById('green-link').
+                addEventListener('mouseover', greenMouseOver, false);
+            document.getElementById('green-link').
+                addEventListener('mouseout', greenMouseOut, false);
+            document.getElementById('blue-link').
+                addEventListener('mouseover', blueMouseOver, false);
+            document.getElementById('blue-link').
+                addEventListener('mouseout', blueMouseOut, false);
+        }//end doLoad
+        function redMouseOver() {
+            document.getElementById('text').style.color = 'red';
+        }//end redMouseOver
+        function redMouseOut() {
+            document.getElementById('text').style.color = 'black';
+        }//end redMouseOut
+        function greenMouseOver() {
+            document.getElementById('text').style.color = 'green';
+        }//end greenMouseOver
+        function greenMouseOut() {
+            document.getElementById('text').style.color = 'black';
+        }//end greenMouseOut
+        function blueMouseOver() {
+            document.getElementById('text').style.color = 'blue';
+        }//end blueMouseOver
+        function blueMouseOut() {
+            document.getElementById('text').style.color = 'black';
+        }//end blueMouseOut
+        window.addEventListener('load', doLoad, false);
+    </script>
+
+</head>
+
+<body>
+    <a id="red-link" href="#">RED</a>
+    <a id="green-link" href="#">GREEN</a>
+    <a id="blue-link" href="#">BLUE</a>
+    <p id="text">Dang Huy Hoang</p>
+
+</body>
+
+
+</html>
